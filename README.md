@@ -1,10 +1,16 @@
-# phpBB Compact Forum Stats
+<p align="center">
+  <img src="docs/images/compactforumstats_icon.png" width="140" height="140" alt="phpBB Compact Forum Stats">
+</p>
 
-[![phpBB Version](https://img.shields.io/badge/phpBB-3.3.x-blue.svg)](https://www.phpbb.com/)
-[![PHP Version](https://img.shields.io/badge/PHP-%3E%3D%207.4-8892BF.svg)](https://php.net/)
-[![License](https://img.shields.io/badge/license-GPL--2.0-green.svg)](LICENSE)
-[![Latest Release](https://img.shields.io/badge/release-v1.0.0-orange.svg)](https://github.com/phpbb-seo/compactforumstats/releases)
-[![Type](https://img.shields.io/badge/type-phpBB%20Extension-brightgreen.svg)](https://www.phpbb.com/customise/db/extensions-36)
+<h1 align="center">phpBB Compact Forum Stats</h1>
+
+<p align="center">
+  <a href="https://www.phpbb.com/"><img src="https://img.shields.io/badge/phpBB-3.3.x-blue.svg" alt="phpBB Version"></a>
+  <a href="https://php.net/"><img src="https://img.shields.io/badge/PHP-%3E%3D%207.4-8892BF.svg" alt="PHP Version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--2.0-green.svg" alt="License"></a>
+  <a href="https://github.com/phpbb-seo/compactforumstats/releases"><img src="https://img.shields.io/badge/release-v1.0.0-orange.svg" alt="Latest Release"></a>
+  <a href="https://www.phpbb.com/customise/db/extensions-36"><img src="https://img.shields.io/badge/type-phpBB%20Extension-brightgreen.svg" alt="Type"></a>
+</p>
 
 An advanced and lightweight **phpBB 3.3.x** extension that transforms large topic, post, user, and view counters across your forum into modern, clean shorthand numbers (e.g. `22.3K` or `1.5M` instead of lengthy figures like `22345`). Includes interactive hover tooltips displaying the exact numbers and full granular controls in the phpBB Administration Control Panel (ACP).
 

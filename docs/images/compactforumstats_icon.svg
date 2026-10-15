@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="35%" stop-color="#1e1b4b"/>
+      <stop offset="70%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Forum Card Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+
+    <!-- Main Compact Pill Gradient -->
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+
+    <!-- Second Pill Gradient (1.5M) -->
+    <linearGradient id="miniPillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Tooltip Background Gradient -->
+    <linearGradient id="tooltipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Chart Bar Gradients -->
+    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="barGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+
+    <filter id="pillShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0284c7" flood-opacity="0.55"/>
+    </filter>
+
+    <filter id="tooltipShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <filter id="glowLight" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Base Squircle Background -->
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Highlight Border -->
+  <rect x="17" y="17" width="478" height="478" rx="107" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2"/>
+
+  <!-- Specular Ambient Glow Top-Left -->
+  <circle cx="120" cy="100" r="130" fill="rgba(56, 189, 248, 0.15)"/>
+  
+  <!-- Decorative Geometry Pattern in Background -->
+  <circle cx="400" cy="380" r="160" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+  <circle cx="400" cy="380" r="210" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"/>
+  <path d="M 40 380 L 472 380" stroke="rgba(255,255,255,0.05)" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <path d="M 40 420 L 472 420" stroke="rgba(255,255,255,0.03)" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+  <!-- ================= Backplate: Forum Discussion / Stats Card ================= -->
+  <g filter="url(#cardShadow)">
+    <rect x="72" y="80" width="368" height="250" rx="28" fill="url(#cardGrad)"/>
+    <!-- Card Border -->
+    <rect x="72" y="80" width="368" height="250" rx="28" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <!-- Forum Row 1: Header Elements -->
+    <rect x="100" y="106" width="36" height="36" rx="10" fill="#eff6ff"/>
+    <!-- Chat Icon in Mini Box -->
+    <path d="M 112 120 C 112 116.5, 114.5, 114, 118, 114 L 126, 114 C 129.5, 114, 132, 116.5, 132, 120 L 132, 126 C 132, 129.5, 129.5, 132, 126, 132 L 118, 132 L 114, 135 L 114, 132 C 112.5, 132, 112, 131, 112, 129 Z" fill="#2563eb"/>
+    
+    <!-- Forum Title & Desc Placeholders -->
+    <rect x="148" y="112" width="130" height="11" rx="5.5" fill="#334155"/>
+    <rect x="148" y="129" width="85" height="7" rx="3.5" fill="#94a3b8"/>
+
+    <!-- Subtle Divider Line -->
+    <line x1="100" y1="156" x2="412" y2="156" stroke="#f1f5f9" stroke-width="2"/>
+
+    <!-- Embedded Analytics Metric Bars -->
+    <!-- Bar 1 -->
+    <rect x="114" y="210" width="18" height="70" rx="9" fill="url(#barGrad1)"/>
+    <!-- Bar 2 -->
+    <rect x="144" y="180" width="18" height="100" rx="9" fill="url(#barGrad2)"/>
+    <!-- Bar 3 -->
+    <rect x="174" y="225" width="18" height="55" rx="9" fill="url(#barGrad1)" opacity="0.75"/>
+
+    <!-- Row Placeholder Content Lines on the Right -->
+    <rect x="225" y="180" width="180" height="9" rx="4.5" fill="#cbd5e1"/>
+    <rect x="225" y="200" width="145" height="9" rx="4.5" fill="#e2e8f0"/>
+    <rect x="225" y="220" width="165" height="9" rx="4.5" fill="#e2e8f0"/>
+    
+    <!-- Light Dotted Baseline for Bars -->
+    <line x1="104" y1="284" x2="412" y2="284" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+  </g>
+
+  <!-- ================= Hover Tooltip Bubble (Above Main Badge) ================= -->
+  <!-- Demonstrates the "Hover exact count" feature: 22,345 with arrow -->
+  <g filter="url(#tooltipShadow)" transform="translate(230, 240)">
+    <!-- Tooltip Body -->
+    <rect x="0" y="0" width="170" height="46" rx="14" fill="url(#tooltipGrad)"/>
+    <rect x="0" y="0" width="170" height="46" rx="14" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+    
+    <!-- Downward Tooltip Pointer / Arrow -->
+    <path d="M 85 46 L 91 53 Q 93 55 95 53 L 101 46 Z" fill="#0f172a"/>
+
+    <!-- Eye / Info Icon -->
+    <circle cx="28" cy="23" r="10" fill="#38bdf8" opacity="0.2"/>
+    <circle cx="28" cy="23" r="4.5" fill="#38bdf8"/>
+
+    <!-- Exact Number Text: 22,345 -->
+    <text x="50" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#f8fafc" letter-spacing="0.5">22,345</text>
+    <text x="115" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#94a3b8" letter-spacing="0.2">RAW</text>
+  </g>
+
+  <!-- ================= Primary Hero Floating Pill: 22.3K ================= -->
+  <g filter="url(#pillShadow)">
+    <!-- Pill Container -->
+    <rect x="96" y="306" width="320" height="96" rx="48" fill="url(#pillGrad)"/>
+    <!-- Pill Border Glow -->
+    <rect x="96" y="306" width="320" height="96" rx="48" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+
+    <!-- Sparkle / Modern Star Accent Left -->
+    <g transform="translate(132, 334) scale(0.9)">
+      <path d="M 20 0 L 23 14 L 37 17 L 23 20 L 20 34 L 17 20 L 3 17 L 17 14 Z" fill="#ffffff" opacity="0.95"/>
+    </g>
+
+    <!-- Main Shorthand Text: 22.3K -->
+    <text x="188" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif" font-size="52" font-weight="900" fill="#ffffff" letter-spacing="1">22.3K</text>
+
+    <!-- Signature Interactive Dotted Underline -->
+    <line x1="190" y1="384" x2="368" y2="384" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 6" opacity="0.85"/>
+
+    <!-- Compression / Arrow Symbol Right -->
+    <g transform="translate(372, 342) scale(0.85)">
+      <circle cx="14" cy="14" r="18" fill="rgba(255,255,255,0.2)"/>
+      <path d="M 8 14 L 18 14 M 14 9 L 19 14 L 14 19" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- ================= Secondary Accent Chip: 1.5M (Bottom Left) ================= -->
+  <g filter="url(#tooltipShadow)" transform="translate(56, 412)">
+    <rect x="0" y="0" width="108" height="38" rx="19" fill="url(#miniPillGrad)"/>
+    <rect x="0" y="0" width="108" height="38" rx="19" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+    <!-- Fire / Growth Icon -->
+    <circle cx="20" cy="19" r="6" fill="#ffffff" opacity="0.3"/>
+    <path d="M 20 15 Q 23 18 20 23 Q 17 20 20 15 Z" fill="#ffffff"/>
+    <text x="36" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="0.5">1.5M</text>
+  </g>
+
+  <!-- ================= Secondary Accent Chip: 1.2B (Bottom Right) ================= -->
+  <g filter="url(#tooltipShadow)" transform="translate(348, 412)">
+    <rect x="0" y="0" width="108" height="38" rx="19" fill="#0f172a"/>
+    <rect x="0" y="0" width="108" height="38" rx="19" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <!-- Dot Beacon -->
+    <circle cx="20" cy="19" r="4.5" fill="#38bdf8"/>
+    <circle cx="20" cy="19" r="8" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.5"/>
+    <text x="36" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="800" fill="#38bdf8" letter-spacing="0.5">1.2B</text>
+  </g>
+
+  <!-- Small Ambient Sparkles -->
+  <circle cx="396" cy="74" r="3" fill="#38bdf8" opacity="0.7"/>
+  <circle cx="430" cy="100" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="68" cy="270" r="2.5" fill="#38bdf8" opacity="0.6"/>
+</svg>
