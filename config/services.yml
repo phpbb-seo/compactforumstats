@@ -1,0 +1,16 @@
+services:
+    phpbbseo.compactforumstats.formatter:
+        class: phpbbseo\compactforumstats\service\formatter
+        arguments:
+            - '@config'
+            - '@user'
+
+    phpbbseo.compactforumstats.listener:
+        class: phpbbseo\compactforumstats\event\listener
+        arguments:
+            - '@config'
+            - '@template'
+            - '@user'
+            - '@phpbbseo.compactforumstats.formatter'
+        tags:
+            - { name: event.listener }

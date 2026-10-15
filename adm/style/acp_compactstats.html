@@ -1,0 +1,141 @@
+<!-- INCLUDE overall_header.html -->
+
+<a id="maincontent"></a>
+
+<h1>{L_ACP_COMPACTSTATS_TITLE}</h1>
+<p>{L_ACP_COMPACTSTATS_SETTINGS_EXPLAIN}</p>
+
+<form id="acp_compactstats" method="post" action="{U_ACTION}">
+
+<fieldset>
+	<legend>{L_ACP_COMPACTSTATS_GENERAL_SETTINGS}</legend>
+
+	<dl>
+		<dt><label for="cstats_enable">{L_ACP_COMPACTSTATS_ENABLE}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_ENABLE_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_enable" name="cstats_enable" value="1"<!-- IF CSTATS_ENABLE --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_enable" value="0"<!-- IF not CSTATS_ENABLE --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_threshold">{L_ACP_COMPACTSTATS_THRESHOLD}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_THRESHOLD_EXPLAIN}</span></dt>
+		<dd><input type="number" id="cstats_threshold" name="cstats_threshold" value="{CSTATS_THRESHOLD}" min="0" step="50" /></dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_decimals">{L_ACP_COMPACTSTATS_DECIMALS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_DECIMALS_EXPLAIN}</span></dt>
+		<dd>
+			<select id="cstats_decimals" name="cstats_decimals">
+				<option value="0"<!-- IF CSTATS_DECIMALS == 0 --> selected="selected"<!-- ENDIF -->>0 ({L_ACP_COMPACTSTATS_DECIMAL_0_EX})</option>
+				<option value="1"<!-- IF CSTATS_DECIMALS == 1 --> selected="selected"<!-- ENDIF -->>1 ({L_ACP_COMPACTSTATS_DECIMAL_1_EX})</option>
+				<option value="2"<!-- IF CSTATS_DECIMALS == 2 --> selected="selected"<!-- ENDIF -->>2 ({L_ACP_COMPACTSTATS_DECIMAL_2_EX})</option>
+			</select>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_suffix_style">{L_ACP_COMPACTSTATS_SUFFIX_STYLE}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_SUFFIX_STYLE_EXPLAIN}</span></dt>
+		<dd>
+			<select id="cstats_suffix_style" name="cstats_suffix_style">
+				<option value="short"<!-- IF CSTATS_SUFFIX_STYLE == 'short' --> selected="selected"<!-- ENDIF -->>{L_ACP_COMPACTSTATS_SUFFIX_SHORT}</option>
+				<option value="fa"<!-- IF CSTATS_SUFFIX_STYLE == 'fa' --> selected="selected"<!-- ENDIF -->>{L_ACP_COMPACTSTATS_SUFFIX_FA}</option>
+				<option value="locale"<!-- IF CSTATS_SUFFIX_STYLE == 'locale' --> selected="selected"<!-- ENDIF -->>{L_ACP_COMPACTSTATS_SUFFIX_LOCALE}</option>
+			</select>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_tooltip">{L_ACP_COMPACTSTATS_TOOLTIP}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_TOOLTIP_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_tooltip" name="cstats_tooltip" value="1"<!-- IF CSTATS_TOOLTIP --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_tooltip" value="0"<!-- IF not CSTATS_TOOLTIP --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+</fieldset>
+
+<fieldset>
+	<legend>{L_ACP_COMPACTSTATS_LOCATIONS}</legend>
+
+	<dl>
+		<dt><label for="cstats_forumlist_topics">{L_ACP_COMPACTSTATS_FORUMLIST_TOPICS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_FORUMLIST_TOPICS_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_forumlist_topics" name="cstats_forumlist_topics" value="1"<!-- IF CSTATS_FORUMLIST_TOPICS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_forumlist_topics" value="0"<!-- IF not CSTATS_FORUMLIST_TOPICS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_forumlist_posts">{L_ACP_COMPACTSTATS_FORUMLIST_POSTS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_FORUMLIST_POSTS_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_forumlist_posts" name="cstats_forumlist_posts" value="1"<!-- IF CSTATS_FORUMLIST_POSTS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_forumlist_posts" value="0"<!-- IF not CSTATS_FORUMLIST_POSTS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_forumlist_clicks">{L_ACP_COMPACTSTATS_FORUMLIST_CLICKS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_FORUMLIST_CLICKS_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_forumlist_clicks" name="cstats_forumlist_clicks" value="1"<!-- IF CSTATS_FORUMLIST_CLICKS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_forumlist_clicks" value="0"<!-- IF not CSTATS_FORUMLIST_CLICKS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_board_stats">{L_ACP_COMPACTSTATS_BOARD_STATS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_BOARD_STATS_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_board_stats" name="cstats_board_stats" value="1"<!-- IF CSTATS_BOARD_STATS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_board_stats" value="0"<!-- IF not CSTATS_BOARD_STATS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_viewforum_views">{L_ACP_COMPACTSTATS_VIEWFORUM_VIEWS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_VIEWFORUM_VIEWS_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_viewforum_views" name="cstats_viewforum_views" value="1"<!-- IF CSTATS_VIEWFORUM_VIEWS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_viewforum_views" value="0"<!-- IF not CSTATS_VIEWFORUM_VIEWS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_viewforum_replies">{L_ACP_COMPACTSTATS_VIEWFORUM_REPLIES}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_VIEWFORUM_REPLIES_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_viewforum_replies" name="cstats_viewforum_replies" value="1"<!-- IF CSTATS_VIEWFORUM_REPLIES --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_viewforum_replies" value="0"<!-- IF not CSTATS_VIEWFORUM_REPLIES --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_poster_posts">{L_ACP_COMPACTSTATS_POSTER_POSTS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_POSTER_POSTS_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_poster_posts" name="cstats_poster_posts" value="1"<!-- IF CSTATS_POSTER_POSTS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_poster_posts" value="0"<!-- IF not CSTATS_POSTER_POSTS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_member_posts">{L_ACP_COMPACTSTATS_MEMBER_POSTS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_MEMBER_POSTS_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_member_posts" name="cstats_member_posts" value="1"<!-- IF CSTATS_MEMBER_POSTS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_member_posts" value="0"<!-- IF not CSTATS_MEMBER_POSTS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt><label for="cstats_search_stats">{L_ACP_COMPACTSTATS_SEARCH_STATS}{L_COLON}</label><br /><span>{L_ACP_COMPACTSTATS_SEARCH_STATS_EXPLAIN}</span></dt>
+		<dd>
+			<label><input type="radio" class="radio" id="cstats_search_stats" name="cstats_search_stats" value="1"<!-- IF CSTATS_SEARCH_STATS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="cstats_search_stats" value="0"<!-- IF not CSTATS_SEARCH_STATS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+		</dd>
+	</dl>
+</fieldset>
+
+<fieldset class="submit-buttons">
+	{S_FORM_TOKEN}
+	<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+	<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+</fieldset>
+
+</form>
+
+<!-- INCLUDE overall_footer.html -->

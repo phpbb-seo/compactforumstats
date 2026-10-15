@@ -1,0 +1,28 @@
+/**
+ * phpBB Compact Forum Stats
+ * Modern clean styling for shortened numbers and tooltips
+ */
+
+.cstats-compact {
+	display: inline-block;
+	cursor: help;
+	transition: opacity 0.2s ease, transform 0.15s ease;
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	text-decoration-color: rgba(120, 130, 140, 0.45);
+}
+
+.cstats-compact:hover {
+	opacity: 0.85;
+	text-decoration-color: rgba(120, 130, 140, 0.9);
+}
+
+/* Better readability for tabular numbers */
+dd.topics .cstats-compact,
+dd.posts .cstats-compact,
+dd.views .cstats-compact,
+dd.profile-posts .cstats-compact {
+	font-variant-numeric: tabular-nums;
+}

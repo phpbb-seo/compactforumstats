@@ -1,0 +1,42 @@
+{
+    "name": "phpbbseo/compactforumstats",
+    "type": "phpbb-extension",
+    "description": "Formats large topic, post, user and view counters across phpBB into modern compact numbers (e.g. 22.3K, 1.5M) with customizable ACP settings and exact tooltip preview.",
+    "homepage": "https://www.phpbbseo.com",
+    "version": "1.0.0",
+    "time": "2026-09-30",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Meis@M",
+            "email": "info@phpbb-seo.ir",
+            "homepage": "https://www.phpbbseo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "composer/installers": "~1.0"
+    },
+    "keywords": [
+        "phpbb",
+        "extension",
+        "forumlist",
+        "stats",
+        "numbers",
+        "format",
+        "compact-stats",
+        "viewforum",
+        "rtl"
+    ],
+    "support": {
+        "issues": "https://github.com/phpbb-seo/compactforumstats/issues",
+        "source": "https://github.com/phpbb-seo/compactforumstats"
+    },
+    "extra": {
+        "display-name": "phpBB Compact Forum Stats",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.3.0,<4.0.0@dev"
+        }
+    }
+}
