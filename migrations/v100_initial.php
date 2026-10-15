@@ -2,7 +2,7 @@
 /**
  * phpBB Compact Forum Stats Extension
  *
- * @copyright (c) 2026 Meis@M <info@phpbb-seo.ir>
+ * @copyright (c) 2026 phpBB SEO <https://www.phpbbseo.com>
  * @license GNU General Public License, version 2 (GPL-2.0)
  */
 

@@ -6,9 +6,7 @@
 [![Latest Release](https://img.shields.io/badge/release-v1.0.0-orange.svg)](https://github.com/phpbb-seo/compactforumstats/releases)
 [![Type](https://img.shields.io/badge/type-phpBB%20Extension-brightgreen.svg)](https://www.phpbb.com/customise/db/extensions-36)
 
-An advanced and lightweight **phpBB 3.3.x** extension that transforms large topic, post, user, and view counters across your forum into modern, clean shorthand numbers (e.g. `22.3K`, `1.5M`, or `۲۲.۳ هزار` instead of lengthy figures like `22345`). Includes interactive hover tooltips displaying the exact numbers and full granular controls in the phpBB Administration Control Panel (ACP).
-
-افزونه حرفه‌ای و سبک **phpBB Compact Forum Stats** برای فشرده‌سازی و فرمت‌بندی هوشمند ارقام بزرگ (مانند تبدیل `۲۲۳۴۵` به `22.3K` یا `۲۲.۳ هزار`) در تمام بخش‌های انجمن phpBB با پنل مدیریت اختصاصی (ACP) و تولتیپ نمایش رقم دقیق.
+An advanced and lightweight **phpBB 3.3.x** extension that transforms large topic, post, user, and view counters across your forum into modern, clean shorthand numbers (e.g. `22.3K` or `1.5M` instead of lengthy figures like `22345`). Includes interactive hover tooltips displaying the exact numbers and full granular controls in the phpBB Administration Control Panel (ACP).
 
 ---
 
@@ -23,7 +21,7 @@ An advanced and lightweight **phpBB 3.3.x** extension that transforms large topi
 - [🗑️ Uninstallation](#️-uninstallation)
 - [🎨 Theme Compatibility & RTL](#-theme-compatibility--rtl)
 - [⚡ Architecture & Performance](#-architecture--performance)
-- [📄 License & Authors](#-license--authors)
+- [📄 License](#-license)
 
 ---
 
@@ -37,7 +35,7 @@ An advanced and lightweight **phpBB 3.3.x** extension that transforms large topi
 - **Interactive Exact-Value Tooltip:** Hovering over any compact number displays the exact, formatted number (e.g. `22,345`) in a native tooltip without requiring extra clicks.
 - **Configurable Suffix Styles:**
   - **International:** `K`, `M`, `B`
-  - **Persian (فارسی):** `هزار`, `میلیون`, `میلیارد`
+  - **Persian:** Localized Persian words (Thousand, Million, Billion)
   - **Language-based (Locale):** Automatically pulls terminology from the active user's language pack.
 - **Granular Toggle Controls:** Easily turn compact formatting on or off independently for each section of the forum (forumlist, viewforum, index stats, member profiles, search results).
 - **Zero Query Overhead (0 SQL Queries):** Uses native phpBB dispatcher events to format variables already loaded in memory—no extra database load.
@@ -78,7 +76,7 @@ Navigate to **ACP &rarr; Customise &rarr; Extensions &rarr; Compact Forum Stats*
 | **Enable compact numbers** | `cstats_enable` | Yes / No | `Yes` (1) | Master toggle to enable or disable compact formatting forum-wide. |
 | **Formatting threshold** | `cstats_threshold` | Integer $\ge 0$ | `1000` | Minimum value before formatting activates. Numbers below this remain unchanged. |
 | **Decimal precision** | `cstats_decimals` | `0`, `1`, `2` | `1` | Number of decimal places shown (`0` = `22K`, `1` = `22.3K`, `2` = `22.34K`). |
-| **Suffix style** | `cstats_suffix_style`| `short`, `fa`, `locale` | `short` | Choose between International (`K/M/B`), Persian (`هزار/میلیون/میلیارد`), or Active Language. |
+| **Suffix style** | `cstats_suffix_style`| `short`, `fa`, `locale` | `short` | Choose between International (`K/M/B`), Persian words, or Active Language. |
 | **Show exact count on hover** | `cstats_tooltip` | Yes / No | `Yes` (1) | Wraps compact numbers in a tooltip with subtle dotted underline revealing the exact number on hover. |
 
 ### 2. Location Toggles
@@ -170,9 +168,9 @@ git clone https://github.com/phpbb-seo/compactforumstats.git compactforumstats
 
 ---
 
-## 📄 License & Authors
+## 📄 License
 
-- **Author:** Meis@M ([info@phpbb-seo.ir](mailto:info@phpbb-seo.ir))
+- **Developer:** [phpBB SEO](https://www.phpbbseo.com)
 - **Homepage:** [https://www.phpbbseo.com](https://www.phpbbseo.com)
 - **Repository:** [https://github.com/phpbb-seo/compactforumstats](https://github.com/phpbb-seo/compactforumstats)
 - **License:** [GNU General Public License v2 (GPL-2.0)](LICENSE)
